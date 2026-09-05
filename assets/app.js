@@ -143,24 +143,32 @@ function calcPage(){
       }
       case'regra-de-tres':{
         const a=num($('#a').value),b=num($('#b').value),c=num($('#c').value);
-        const r=a?b*c/a:0;
+        if(a===0){ result='Não foi possível calcular'; detail='O primeiro valor da proporção não pode ser zero.'; break; }
+        const r=b*c/a;
         result=r.toLocaleString('pt-BR',{maximumFractionDigits:6}); detail=`Se ${a} corresponde a ${b}, então ${c} corresponde a ${result}.`; break;
       }
       case'imc':{
-        const peso=Math.max(0,num($('#peso').value)),altura=Math.max(0,num($('#altura').value))/100,imc=altura?peso/(altura*altura):0;
+        const peso=Math.max(0,num($('#peso').value)),altura=Math.max(0,num($('#altura').value))/100;
+        if(peso<=0 || altura<=0){ result='Informe valores válidos'; detail='Peso e altura devem ser maiores que zero.'; break; }
+        const imc=peso/(altura*altura);
         result=imc.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
         detail=imc<18.5?'Abaixo de 18,5: abaixo do peso.':imc<25?'Entre 18,5 e 24,9: faixa considerada adequada para adultos.':imc<30?'Entre 25 e 29,9: acima da faixa de referência.':'30 ou mais: faixa de obesidade. Não é diagnóstico.'; break;
       }
       case'combustivel':{
-        const km=Math.max(0,num($('#km').value)),cons=Math.max(0,num($('#cons').value)),preco=Math.max(0,num($('#preco').value)),litros=cons?km/cons:0;
+        const km=Math.max(0,num($('#km').value)),cons=Math.max(0,num($('#cons').value)),preco=Math.max(0,num($('#preco').value));
+        if(cons<=0){ result='Informe valores válidos'; detail='O consumo do veículo deve ser maior que zero km/L.'; break; }
+        const litros=km/cons;
         result=money(litros*preco); detail=`Você consumirá aproximadamente ${litros.toLocaleString('pt-BR',{maximumFractionDigits:2})} L.`; break;
       }
       case'custo-de-viagem':{
-        const km=Math.max(0,num($('#km').value)),cons=Math.max(0,num($('#cons').value)),preco=Math.max(0,num($('#preco').value)),pedagios=Math.max(0,num($('#pedagios').value)),litros=cons?km/cons:0;
+        const km=Math.max(0,num($('#km').value)),cons=Math.max(0,num($('#cons').value)),preco=Math.max(0,num($('#preco').value)),pedagios=Math.max(0,num($('#pedagios').value));
+        if(cons<=0){ result='Informe valores válidos'; detail='O consumo do veículo deve ser maior que zero km/L.'; break; }
+        const litros=km/cons;
         result=money(litros*preco+pedagios); detail=`Combustível: ${money(litros*preco)} + pedágios: ${money(pedagios)}.`; break;
       }
       case'financiamento':{
-        const pv=Math.max(0,num($('#pv').value)),taxa=Math.max(0,num($('#taxa').value))/100,meses=Math.max(1,Math.floor(num($('#meses').value)));
+        const pv=Math.max(0,num($('#pv').value)),taxa=Math.max(0,num($('#taxa').value))/100,meses=Math.floor(num($('#meses').value));
+        if(meses<=0){ result='Informe valores válidos'; detail='O prazo deve ser de pelo menos 1 mês.'; break; }
         const parcela=taxa?pv*(taxa*Math.pow(1+taxa,meses))/(Math.pow(1+taxa,meses)-1):pv/meses;
         result=money(parcela); detail=`Estimativa pela Tabela Price para ${meses} meses, sem seguros, tarifas ou outros encargos.`; break;
       }
@@ -169,18 +177,23 @@ function calcPage(){
         result=`${(area*(1+perda/100)).toLocaleString('pt-BR',{maximumFractionDigits:2})} m²`; detail=`Área base: ${area.toLocaleString('pt-BR')} m² + ${percent(perda)} de margem.`; break;
       }
       case'tinta':{
-        const area=Math.max(0,num($('#area').value)),rendimento=Math.max(0,num($('#rendimento').value)),demãos=Math.max(1,Math.floor(num($('#demao').value))),litros=rendimento?area*demãos/rendimento:0;
+        const area=Math.max(0,num($('#area').value)),rendimento=Math.max(0,num($('#rendimento').value)),demãos=Math.max(1,Math.floor(num($('#demao').value)));
+        if(rendimento<=0){ result='Informe valores válidos'; detail='O rendimento deve ser maior que zero m²/L.'; break; }
+        const litros=area*demãos/rendimento;
         result=`${litros.toLocaleString('pt-BR',{maximumFractionDigits:1})} L`; detail=`Estimativa para ${demãos} demão(ões), usando o rendimento informado.`; break;
       }
       case'media':{
         const vals=$('#valores').value.split(/[,;\s]+/).map(num).filter(v=>Number.isFinite(v));
-        const m=vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:0; result=m.toLocaleString('pt-BR',{maximumFractionDigits:4}); detail=`Foram considerados ${vals.length} valor(es).`; break;
+        if(!vals.length){ result='Informe valores válidos'; detail='Digite pelo menos um número para calcular a média.'; break; }
+        const m=vals.reduce((a,b)=>a+b,0)/vals.length; result=m.toLocaleString('pt-BR',{maximumFractionDigits:4}); detail=`Foram considerados ${vals.length} valor(es).`; break;
       }
       case'temperatura':{
         const v=num($('#temp').value),from=$('#from').value,to=$('#to').value;
+        if(from==='K' && v<0){ result='Informe uma temperatura válida'; detail='A escala Kelvin não admite valores negativos.'; break; }
         let c=from==='C'?v:from==='F'?(v-32)*5/9:v-273.15;
         const out=to==='C'?c:to==='F'?c*9/5+32:c+273.15;
-        result=`${out.toLocaleString('pt-BR',{maximumFractionDigits:2})} °${to}`; detail=`Conversão de ${v.toLocaleString('pt-BR')} °${from} para °${to}.`; break;
+        const unit=to==='K'?'K':`°${to}`;
+        result=`${out.toLocaleString('pt-BR',{maximumFractionDigits:2})} ${unit}`; detail=`Conversão de ${v.toLocaleString('pt-BR')} ${from==='K'?'K':`°${from}`} para ${unit}.`; break;
       }
       case'juros-compostos':{
         const vi=Math.max(0,num($('#vi').value)),aporte=Math.max(0,num($('#aporte').value)),taxa=Math.max(-99.99,num($('#taxa').value))/100,meses=Math.max(0,Math.floor(num($('#meses').value)));
