@@ -4,12 +4,198 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CalculaTudo — Calculadoras online rápidas e gratuitas</title>
-<meta name="description" content="Calculadoras online gratuitas de finanças, casa, veículos, saúde, matemática e muito mais.">
+<meta name="description" content="Calculadoras online gratuitas para finanças, matemática, casa, veículos e saúde. Resultados rápidos, fórmulas explicadas e ferramentas fáceis de usar.">
 <meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#050816">
+<meta name="color-scheme" content="dark light">
+<meta property="og:title" content="CalculaTudo — Calculadoras online rápidas e gratuitas">
+<meta property="og:description" content="Ferramentas gratuitas para calcular, comparar e planejar situações do dia a dia.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calculatudo-site.onrender.com/">
+<meta name="twitter:card" content="summary">
 <script>(function(){var b=document.createElement("base");b.href=location.hostname.endsWith("github.io")?"/calculatudo/":"/";document.head.appendChild(b)})();</script>
-<link rel="icon" href="favicon.svg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="assets/style.css">
 <script defer src="assets/app.js"></script>
 <link rel="canonical" href="https://calculatudo-site.onrender.com/">
-</head><body><header class="topbar"><div class="container nav"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">▦</span><span>Calcula<span style="color:#34d399">Tudo</span></span></a><nav class="navlinks" aria-label="Principal"><a href="calculadoras/">Calculadoras</a><a href="calculadoras/?categoria=financas">Finanças</a><a href="calculadoras/?categoria=casa">Casa</a><a href="calculadoras/?categoria=veiculos">Veículos</a><a href="calculadoras/?categoria=saude">Saúde</a><a href="calculadoras/?categoria=educacao">Educação</a></nav><div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Alternar tema">☾</button><a class="primary-btn" href="calculadoras/">Explorar</a></div></div></header><main><section class="hero"><div class="container hero-grid"><div><span class="eyebrow">★ Ferramentas gratuitas e úteis</span><h1>Todas as calculadoras que você precisa,<br><span class="gradient-text">em um só lugar.</span></h1><p>Resultados rápidos, interface premium e cálculos transparentes para facilitar decisões do dia a dia.</p><div class="trust-row"><div class="trust"><strong>100% gratuito</strong><span>Sem cadastro para usar.</span></div><div class="trust"><strong>Resultado instantâneo</strong><span>Calcule em segundos.</span></div><div class="trust"><strong>Transparente</strong><span>Veja como a conta funciona.</span></div></div><div class="search-row"><label class="search"><span>⌕</span><input id="homeSearch" placeholder="O que você precisa calcular hoje?"></label><a class="ghost-btn" href="calculadoras/">▦ Ver categorias</a></div></div><div class="hero-card"><form class="calc-card" id="heroCalc"><div class="calc-head"><h2>Calculadora de Juros Compostos</h2><span class="pill">Popular</span></div><div class="calc-layout"><div><div class="field"><label>Valor inicial</label><div class="input-wrap"><span>R$</span><input id="vi" value="10000" inputmode="decimal"></div></div><div class="field"><label>Aporte mensal</label><div class="input-wrap"><span>R$</span><input id="aporte" value="500" inputmode="decimal"></div></div><div class="field"><label>Taxa de juros ao mês</label><div class="input-wrap"><input id="taxa" value="1" inputmode="decimal"><span>%</span></div></div><div class="field"><label>Período</label><div class="input-wrap"><input id="meses" value="60" inputmode="numeric"><span>meses</span></div></div><button class="calc-button" type="submit">Calcular →</button></div><div class="result"><div class="label">Valor total acumulado</div><div class="big" id="resultado">R$ 0,00</div><div class="result-row"><span>Valor inicial</span><strong id="rInicial">R$ 0,00</strong></div><div class="result-row"><span>Total aportes</span><strong id="rAportes">R$ 0,00</strong></div><div class="result-row"><span>Total juros</span><strong id="rJuros">R$ 0,00</strong></div><div class="chart"><svg id="growthChart" viewBox="0 0 420 140" role="img" aria-label="Gráfico de evolução"></svg></div></div></div><div class="hero-note">Estimativa matemática. Taxas e condições reais variam conforme produto financeiro.</div></form></div></div></section><section class="stats"><div class="container stats-grid"><div class="stat"><div class="stat-icon">▦</div><div><strong>10+</strong><span>ferramentas iniciais</span></div></div><div class="stat"><div class="stat-icon">◔</div><div><strong>Instantâneo</strong><span>resultados na tela</span></div></div><div class="stat"><div class="stat-icon">✓</div><div><strong>Sem cadastro</strong><span>comece agora</span></div></div><div class="stat"><div class="stat-icon">⌁</div><div><strong>Responsivo</strong><span>celular e computador</span></div></div></div></section><section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Categorias</div><h2>Encontre a calculadora ideal</h2><p>Ferramentas organizadas por assunto para você chegar ao resultado sem complicação.</p></div><a class="ghost-btn" href="calculadoras/">Ver todas</a></div><div class="category-grid"><a class="category" href="calculadoras/?categoria=financas"><div class="cat-icon">$</div><h3>Finanças</h3><p>Juros, parcelas, porcentagens e planejamento.</p><div class="count">2 ferramentas</div></a><a class="category" href="calculadoras/?categoria=casa"><div class="cat-icon">⌂</div><h3>Casa e construção</h3><p>Piso, tinta e medidas para sua obra.</p><div class="count">2 ferramentas</div></a><a class="category" href="calculadoras/?categoria=veiculos"><div class="cat-icon">▱</div><h3>Veículos</h3><p>Combustível e custos de viagem.</p><div class="count">2 ferramentas</div></a><a class="category" href="calculadoras/?categoria=saude"><div class="cat-icon">♡</div><h3>Saúde e bem-estar</h3><p>Indicadores simples para consulta rápida.</p><div class="count">1 ferramenta</div></a><a class="category" href="calculadoras/?categoria=educacao"><div class="cat-icon">✦</div><h3>Matemática</h3><p>Regra de três, média e conversões.</p><div class="count">4 ferramentas</div></a></div></div></section><section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Mais usadas</div><h2>Comece por aqui</h2><p>As primeiras ferramentas do projeto foram escolhidas para cobrir buscas comuns e de alta utilidade.</p></div></div><div class="tool-grid"><a class="tool-card" href="calculadoras/juros-compostos/"><span class="badge">Finanças</span><h3>Juros compostos</h3><p>Projete o crescimento de um valor com aportes e taxa mensal.</p><div class="tool-meta"><span>↗ Calcular</span><span>Popular</span></div></a><a class="tool-card" href="calculadoras/porcentagem/"><span class="badge">Matemática</span><h3>Porcentagem</h3><p>Descubra quanto é uma porcentagem de qualquer valor.</p><div class="tool-meta"><span>↗ Calcular</span><span>Rápida</span></div></a><a class="tool-card" href="calculadoras/financiamento/"><span class="badge">Finanças</span><h3>Financiamento</h3><p>Estime parcelas pelo sistema Price com taxa e prazo.</p><div class="tool-meta"><span>↗ Calcular</span><span>Estimativa</span></div></a><a class="tool-card" href="calculadoras/combustivel/"><span class="badge">Veículos</span><h3>Combustível</h3><p>Calcule o gasto aproximado de combustível em uma distância.</p><div class="tool-meta"><span>↗ Calcular</span><span>Popular</span></div></a><a class="tool-card" href="calculadoras/piso/"><span class="badge">Casa</span><h3>Piso</h3><p>Estime a quantidade de material considerando margem de perda.</p><div class="tool-meta"><span>↗ Calcular</span><span>Obra</span></div></a><a class="tool-card" href="calculadoras/imc/"><span class="badge">Saúde</span><h3>IMC</h3><p>Calcule o índice de massa corporal com uma explicação simples.</p><div class="tool-meta"><span>↗ Calcular</span><span>Informativo</span></div></a></div></div></section><section class="section"><div class="container"><div class="cta"><div><h2>Uma plataforma feita para crescer com você.</h2><p>Começamos com ferramentas essenciais e uma arquitetura pronta para receber muitas outras.</p></div><a class="primary-btn" href="calculadoras/">Explorar calculadoras →</a></div></div></section></main><footer class="footer"><div class="container"><div class="footer-grid"><div><div class="brand">▦ <span>Calcula<span style="color:#34d399">Tudo</span></span></div><p>Ferramentas online gratuitas para transformar perguntas em respostas rápidas e úteis.</p></div><div><h4>Ferramentas</h4><a href="calculadoras/">Todas</a><a href="calculadoras/juros-compostos/">Juros compostos</a><a href="calculadoras/porcentagem/">Porcentagem</a><a href="calculadoras/financiamento/">Financiamento</a></div><div><h4>Projeto</h4><a href="sobre/">Sobre</a><a href="contato/">Contato</a><a href="privacidade/">Privacidade</a><a href="termos/">Termos</a></div><div><h4>Publicidade</h4><p>O site pode exibir publicidade para manter as ferramentas gratuitas.</p></div></div><div class="copyright"><span>© 2026 CalculaTudo. Todos os direitos reservados.</span><span>Feito para ser rápido, claro e útil.</span></div></div></footer></body></html>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"CalculaTudo",
+  "url":"https://calculatudo-site.onrender.com/",
+  "description":"Calculadoras online gratuitas para situações do dia a dia.",
+  "inLanguage":"pt-BR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"Calculadoras em destaque",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Juros compostos","url":"https://calculatudo-site.onrender.com/calculadoras/juros-compostos/"},
+    {"@type":"ListItem","position":2,"name":"Porcentagem","url":"https://calculatudo-site.onrender.com/calculadoras/porcentagem/"},
+    {"@type":"ListItem","position":3,"name":"Financiamento","url":"https://calculatudo-site.onrender.com/calculadoras/financiamento/"},
+    {"@type":"ListItem","position":4,"name":"Combustível","url":"https://calculatudo-site.onrender.com/calculadoras/combustivel/"},
+    {"@type":"ListItem","position":5,"name":"Piso","url":"https://calculatudo-site.onrender.com/calculadoras/piso/"},
+    {"@type":"ListItem","position":6,"name":"IMC","url":"https://calculatudo-site.onrender.com/calculadoras/imc/"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="./" aria-label="CalculaTudo — página inicial"><span class="brand-mark" aria-hidden="true">▦</span><span>Calcula<span style="color:#34d399">Tudo</span></span></a>
+    <nav class="navlinks" aria-label="Principal">
+      <a href="calculadoras/">Calculadoras</a>
+      <a href="calculadoras/?categoria=financas">Finanças</a>
+      <a href="calculadoras/?categoria=casa">Casa</a>
+      <a href="calculadoras/?categoria=veiculos">Veículos</a>
+      <a href="calculadoras/?categoria=saude">Saúde</a>
+      <a href="calculadoras/?categoria=educacao">Matemática</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Alternar tema">☾</button>
+      <a class="primary-btn" href="calculadoras/">Explorar</a>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">★ Ferramentas gratuitas e úteis</span>
+        <h1>Calculadoras online para resolver contas do dia a dia,<br><span class="gradient-text">em um só lugar.</span></h1>
+        <p>Calcule rapidamente, entenda o resultado e veja como a conta funciona. O CalculaTudo reúne ferramentas gratuitas para finanças, matemática, casa, veículos e saúde.</p>
+        <div class="trust-row">
+          <div class="trust"><strong>100% gratuito</strong><span>Sem cadastro para usar.</span></div>
+          <div class="trust"><strong>Resultado instantâneo</strong><span>Calcule direto no navegador.</span></div>
+          <div class="trust"><strong>Transparente</strong><span>Fórmulas e limitações explicadas.</span></div>
+        </div>
+        <div class="search-row" role="search" aria-label="Pesquisar calculadora">
+          <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">Pesquisar calculadora</span><input id="homeSearch" type="search" autocomplete="off" placeholder="O que você precisa calcular hoje?" aria-label="O que você precisa calcular hoje?"></label>
+          <a class="ghost-btn" href="calculadoras/">▦ Ver categorias</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <form class="calc-card" id="heroCalc">
+          <div class="calc-head"><h2>Calculadora de juros compostos</h2><span class="pill">Destaque</span></div>
+          <div class="calc-layout">
+            <div>
+              <div class="field"><label for="vi">Valor inicial</label><div class="input-wrap"><span aria-hidden="true">R$</span><input id="vi" value="10000" inputmode="decimal"></div></div>
+              <div class="field"><label for="aporte">Aporte mensal</label><div class="input-wrap"><span aria-hidden="true">R$</span><input id="aporte" value="500" inputmode="decimal"></div></div>
+              <div class="field"><label for="taxa">Taxa de juros ao mês</label><div class="input-wrap"><input id="taxa" value="1" inputmode="decimal"><span aria-hidden="true">%</span></div></div>
+              <div class="field"><label for="meses">Período</label><div class="input-wrap"><input id="meses" value="60" inputmode="numeric"><span aria-hidden="true">meses</span></div></div>
+              <button class="calc-button" type="submit">Calcular →</button>
+            </div>
+            <div class="result">
+              <div class="label">Valor total acumulado</div>
+              <div class="big" id="resultado" aria-live="polite">R$ 0,00</div>
+              <div class="result-row"><span>Valor inicial</span><strong id="rInicial">R$ 0,00</strong></div>
+              <div class="result-row"><span>Total aportes</span><strong id="rAportes">R$ 0,00</strong></div>
+              <div class="result-row"><span>Total juros</span><strong id="rJuros">R$ 0,00</strong></div>
+              <div class="chart"><svg id="growthChart" viewBox="0 0 420 140" role="img" aria-label="Gráfico ilustrativo da evolução do valor"></svg></div>
+            </div>
+          </div>
+          <div class="hero-note">Simulação matemática. Taxas, impostos, tarifas e condições reais variam conforme o produto financeiro.</div>
+          <a class="mini-link" href="calculadoras/juros-compostos/">Ver calculadora completa de juros compostos →</a>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Recursos do CalculaTudo">
+    <div class="container stats-grid">
+      <div class="stat"><div class="stat-icon" aria-hidden="true">▦</div><div><strong>11</strong><span>calculadoras disponíveis</span></div></div>
+      <div class="stat"><div class="stat-icon" aria-hidden="true">◔</div><div><strong>Instantâneo</strong><span>resultados na tela</span></div></div>
+      <div class="stat"><div class="stat-icon" aria-hidden="true">✓</div><div><strong>Sem cadastro</strong><span>comece quando quiser</span></div></div>
+      <div class="stat"><div class="stat-icon" aria-hidden="true">⌁</div><div><strong>Responsivo</strong><span>celular e computador</span></div></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="categorias-titulo">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="kicker">Categorias</div><h2 id="categorias-titulo">Encontre a calculadora ideal</h2><p>Ferramentas organizadas por assunto para você chegar ao resultado sem complicação.</p></div>
+        <a class="ghost-btn" href="calculadoras/">Ver todas</a>
+      </div>
+      <div class="category-grid">
+        <a class="category" href="calculadoras/?categoria=financas"><div class="cat-icon" aria-hidden="true">$</div><h3>Finanças</h3><p>Juros, parcelas, porcentagens e planejamento.</p><div class="count">2 ferramentas</div></a>
+        <a class="category" href="calculadoras/?categoria=casa"><div class="cat-icon" aria-hidden="true">⌂</div><h3>Casa e construção</h3><p>Piso, tinta e medidas para sua obra.</p><div class="count">2 ferramentas</div></a>
+        <a class="category" href="calculadoras/?categoria=veiculos"><div class="cat-icon" aria-hidden="true">▱</div><h3>Veículos</h3><p>Combustível e custos de viagem.</p><div class="count">2 ferramentas</div></a>
+        <a class="category" href="calculadoras/?categoria=saude"><div class="cat-icon" aria-hidden="true">♡</div><h3>Saúde e bem-estar</h3><p>Indicadores simples para consulta rápida.</p><div class="count">1 ferramenta</div></a>
+        <a class="category" href="calculadoras/?categoria=educacao"><div class="cat-icon" aria-hidden="true">✦</div><h3>Matemática</h3><p>Regra de três, média e conversões.</p><div class="count">4 ferramentas</div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="destaques-titulo">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="kicker">Destaques</div><h2 id="destaques-titulo">Comece por aqui</h2><p>Uma seleção de ferramentas para necessidades frequentes, com explicações e observações sobre o resultado.</p></div>
+      </div>
+      <div class="tool-grid">
+        <a class="tool-card" href="calculadoras/juros-compostos/"><span class="badge">Finanças</span><h3>Juros compostos</h3><p>Projete o crescimento de um valor com aportes e taxa mensal.</p><div class="tool-meta"><span>↗ Calcular</span><span>Simulação</span></div></a>
+        <a class="tool-card" href="calculadoras/porcentagem/"><span class="badge">Matemática</span><h3>Porcentagem</h3><p>Descubra quanto uma porcentagem representa de um valor.</p><div class="tool-meta"><span>↗ Calcular</span><span>Rápida</span></div></a>
+        <a class="tool-card" href="calculadoras/financiamento/"><span class="badge">Finanças</span><h3>Financiamento</h3><p>Estime parcelas pelo sistema Price com taxa e prazo.</p><div class="tool-meta"><span>↗ Calcular</span><span>Estimativa</span></div></a>
+        <a class="tool-card" href="calculadoras/combustivel/"><span class="badge">Veículos</span><h3>Combustível</h3><p>Calcule o gasto aproximado de combustível em uma distância.</p><div class="tool-meta"><span>↗ Calcular</span><span>Estimativa</span></div></a>
+        <a class="tool-card" href="calculadoras/piso/"><span class="badge">Casa</span><h3>Piso</h3><p>Estime a área de material considerando uma margem de perda.</p><div class="tool-meta"><span>↗ Calcular</span><span>Obra</span></div></a>
+        <a class="tool-card" href="calculadoras/imc/"><span class="badge">Saúde</span><h3>IMC</h3><p>Calcule o índice de massa corporal e consulte a faixa de referência.</p><div class="tool-meta"><span>↗ Calcular</span><span>Informativo</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section content-section" aria-labelledby="sobre-titulo">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">Conteúdo útil</div><h2 id="sobre-titulo">Calculadoras pensadas para situações reais</h2><p>Mais do que entregar um número, o objetivo é ajudar você a entender o que está sendo calculado.</p></div></div>
+      <div class="content-grid">
+        <article class="info-card"><h3>Como usar</h3><p>Escolha uma categoria ou pesquise pelo que deseja calcular. Informe os valores nas unidades indicadas e confira o resultado. Quando fizer sentido, a ferramenta também mostra fórmula, exemplo ou observações para ajudar na interpretação.</p></article>
+        <article class="info-card"><h3>Resultados transparentes</h3><p>Os cálculos são executados no navegador e as páginas explicam as premissas usadas. Isso facilita a conferência e deixa claro quando o resultado é uma estimativa, como em financiamentos, combustível e custos de viagem.</p></article>
+        <article class="info-card"><h3>Use o resultado com contexto</h3><p>Uma calculadora ajuda a estimar e comparar cenários, mas não substitui documentos, contratos, medições profissionais ou orientação especializada. Em decisões financeiras, de saúde ou de obra, confira as condições específicas do seu caso.</p></article>
+      </div>
+      <div class="article-copy">
+        <h3>Por que ter várias calculadoras em um só lugar?</h3>
+        <p>No dia a dia, muitas decisões começam com uma pergunta simples: quanto vou gastar, qual será a parcela, quantos litros de combustível preciso ou qual é a média de uma lista de valores? Ter ferramentas específicas reduz contas manuais e ajuda a testar diferentes cenários rapidamente.</p>
+        <p>O CalculaTudo foi organizado para que cada ferramenta tenha uma finalidade clara. Você pode começar pela categoria, pesquisar pelo nome da conta ou usar os destaques acima. Nas páginas individuais, a proposta é combinar o cálculo com uma explicação objetiva da fórmula e dos cuidados que podem alterar o resultado.</p>
+        <p>Os resultados exibidos são calculados a partir dos dados informados. Quando uma conta depende de condições externas — como taxas de financiamento, preço do combustível, rendimento de tinta ou margem de perda de material — o resultado deve ser tratado como estimativa e comparado com as condições reais antes de uma decisão.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-titulo">
+    <div class="container faq-section">
+      <div class="section-head"><div><div class="kicker">Dúvidas comuns</div><h2 id="faq-titulo">Perguntas frequentes</h2><p>Respostas rápidas sobre o funcionamento das ferramentas.</p></div></div>
+      <div class="faq-list">
+        <details><summary>As calculadoras são gratuitas?</summary><p>Sim. As ferramentas podem ser usadas gratuitamente e sem cadastro.</p></details>
+        <details><summary>Meus dados são enviados para um servidor?</summary><p>Os cálculos das ferramentas são executados no navegador. Evite inserir informações pessoais desnecessárias em qualquer campo.</p></details>
+        <details><summary>Os resultados financeiros são uma cotação?</summary><p>Não. Juros compostos e financiamento são simulações matemáticas baseadas nos valores informados e não representam uma proposta comercial.</p></details>
+        <details><summary>O IMC é um diagnóstico?</summary><p>Não. O IMC é um indicador de referência e deve ser interpretado com contexto. A página da ferramenta explica suas limitações.</p></details>
+        <details><summary>Posso usar o CalculaTudo no celular?</summary><p>Sim. A interface foi construída para funcionar em telas pequenas e grandes, com campos e resultados adaptados.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container"><div class="cta"><div><h2>Pronto para calcular?</h2><p>Explore as 11 ferramentas disponíveis e encontre a conta que você precisa.</p></div><a class="primary-btn" href="calculadoras/">Explorar calculadoras →</a></div></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="brand">▦ <span>Calcula<span style="color:#34d399">Tudo</span></span></div><p>Ferramentas online gratuitas para transformar perguntas em respostas rápidas e úteis.</p></div>
+      <div><h4>Ferramentas</h4><a href="calculadoras/">Todas</a><a href="calculadoras/juros-compostos/">Juros compostos</a><a href="calculadoras/porcentagem/">Porcentagem</a><a href="calculadoras/financiamento/">Financiamento</a></div>
+      <div><h4>Projeto</h4><a href="sobre/">Sobre</a><a href="contato/">Contato</a><a href="privacidade/">Privacidade</a><a href="termos/">Termos</a></div>
+      <div><h4>Publicidade</h4><p>O site pode exibir publicidade para manter as ferramentas gratuitas.</p></div>
+    </div>
+    <div class="copyright"><span>© 2026 CalculaTudo. Todos os direitos reservados.</span><span>Feito para ser rápido, claro e útil.</span></div>
+  </div>
+</footer>
+</body>
+</html>
